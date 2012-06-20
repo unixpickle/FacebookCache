@@ -12,9 +12,17 @@
 
 @synthesize window = _window;
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
-{
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
+    authWindow = [[ANFBAuthWindow alloc] initWithScreen:[NSScreen mainScreen]];
+    [authWindow makeKeyAndOrderFront:self];
+    [authWindow setDelegate:self];
+}
+
+- (void)authWindow:(ANFBAuthWindow *)aWindow didAuthenticate:(ANFBOAuthInfo *)info {
+    NSLog(@"Got OAuth info: %@", info);
+    [authWindow orderOut:self];
+    authWindow = nil;
 }
 
 @end

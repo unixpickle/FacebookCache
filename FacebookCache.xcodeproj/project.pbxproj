@@ -13,6 +13,9 @@
 		FA6FE35D15911380005783B1 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = FA6FE35B15911380005783B1 /* Credits.rtf */; };
 		FA6FE36015911380005783B1 /* ANAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6FE35F15911380005783B1 /* ANAppDelegate.m */; };
 		FA6FE36315911381005783B1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA6FE36115911381005783B1 /* MainMenu.xib */; };
+		FA6FE36D159113A9005783B1 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6FE36C159113A9005783B1 /* WebKit.framework */; };
+		FAC0E8DD15925D5700DDD4F7 /* ANFBAuthWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC0E8DA15925D5700DDD4F7 /* ANFBAuthWindow.m */; };
+		FAC0E8DE15925D5700DDD4F7 /* ANFBOAuthInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC0E8DC15925D5700DDD4F7 /* ANFBOAuthInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,14 +24,19 @@
 		FA6FE34F15911380005783B1 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		FA6FE35015911380005783B1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		FA6FE35115911380005783B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		FA6FE35415911380005783B1 /* FacebookCache-Info.plist */ = {isa = PBXFileReference; path = "FacebookCache-Info.plist"; sourceTree = "<group>"; };
+		FA6FE35415911380005783B1 /* FacebookCache-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FacebookCache-Info.plist"; sourceTree = "<group>"; };
 		FA6FE35615911380005783B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FA6FE35815911380005783B1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		FA6FE35A15911380005783B1 /* FacebookCache-Prefix.pch */ = {isa = PBXFileReference; path = "FacebookCache-Prefix.pch"; sourceTree = "<group>"; };
+		FA6FE35A15911380005783B1 /* FacebookCache-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FacebookCache-Prefix.pch"; sourceTree = "<group>"; };
 		FA6FE35C15911380005783B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		FA6FE35E15911380005783B1 /* ANAppDelegate.h */ = {isa = PBXFileReference; path = ANAppDelegate.h; sourceTree = "<group>"; };
+		FA6FE35E15911380005783B1 /* ANAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ANAppDelegate.h; sourceTree = "<group>"; };
 		FA6FE35F15911380005783B1 /* ANAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ANAppDelegate.m; sourceTree = "<group>"; };
 		FA6FE36215911381005783B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		FA6FE36C159113A9005783B1 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		FAC0E8D915925D5700DDD4F7 /* ANFBAuthWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANFBAuthWindow.h; sourceTree = "<group>"; };
+		FAC0E8DA15925D5700DDD4F7 /* ANFBAuthWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANFBAuthWindow.m; sourceTree = "<group>"; };
+		FAC0E8DB15925D5700DDD4F7 /* ANFBOAuthInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANFBOAuthInfo.h; sourceTree = "<group>"; };
+		FAC0E8DC15925D5700DDD4F7 /* ANFBOAuthInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANFBOAuthInfo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA6FE36D159113A9005783B1 /* WebKit.framework in Frameworks */,
 				FA6FE34D15911380005783B1 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -63,6 +72,7 @@
 		FA6FE34B15911380005783B1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA6FE36C159113A9005783B1 /* WebKit.framework */,
 				FA6FE34C15911380005783B1 /* Cocoa.framework */,
 				FA6FE34E15911380005783B1 /* Other Frameworks */,
 			);
@@ -82,6 +92,7 @@
 		FA6FE35215911380005783B1 /* FacebookCache */ = {
 			isa = PBXGroup;
 			children = (
+				FAC0E8D815925D5700DDD4F7 /* Authentication */,
 				FA6FE35E15911380005783B1 /* ANAppDelegate.h */,
 				FA6FE35F15911380005783B1 /* ANAppDelegate.m */,
 				FA6FE36115911381005783B1 /* MainMenu.xib */,
@@ -100,6 +111,17 @@
 				FA6FE35B15911380005783B1 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FAC0E8D815925D5700DDD4F7 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				FAC0E8D915925D5700DDD4F7 /* ANFBAuthWindow.h */,
+				FAC0E8DA15925D5700DDD4F7 /* ANFBAuthWindow.m */,
+				FAC0E8DB15925D5700DDD4F7 /* ANFBOAuthInfo.h */,
+				FAC0E8DC15925D5700DDD4F7 /* ANFBOAuthInfo.m */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +190,8 @@
 			files = (
 				FA6FE35915911380005783B1 /* main.m in Sources */,
 				FA6FE36015911380005783B1 /* ANAppDelegate.m in Sources */,
+				FAC0E8DD15925D5700DDD4F7 /* ANFBAuthWindow.m in Sources */,
+				FAC0E8DE15925D5700DDD4F7 /* ANFBOAuthInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +313,7 @@
 				FA6FE36815911381005783B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
