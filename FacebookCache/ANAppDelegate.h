@@ -8,11 +8,11 @@
 
 #import <Cocoa/Cocoa.h>
 #import "ANFBAuthWindow.h"
+#import "ANFBFriendsWindow.h"
 
 @interface ANAppDelegate : NSObject <NSApplicationDelegate, ANFBAuthWindowDelegate> {
     ANFBAuthWindow * authWindow;
+    ANFBFriendsWindow * friendsWindow;
 }
-
-@property (assign) IBOutlet NSWindow * window;
 
 @end

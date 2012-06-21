@@ -16,6 +16,19 @@
 		FA6FE36D159113A9005783B1 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6FE36C159113A9005783B1 /* WebKit.framework */; };
 		FAC0E8DD15925D5700DDD4F7 /* ANFBAuthWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC0E8DA15925D5700DDD4F7 /* ANFBAuthWindow.m */; };
 		FAC0E8DE15925D5700DDD4F7 /* ANFBOAuthInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC0E8DC15925D5700DDD4F7 /* ANFBOAuthInfo.m */; };
+		FAC0E8E215925DA700DDD4F7 /* ANFBSession.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC0E8E115925DA700DDD4F7 /* ANFBSession.m */; };
+		FAC0E8E515925E5300DDD4F7 /* ANFBResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC0E8E415925E5300DDD4F7 /* ANFBResponse.m */; };
+		FAC0E8E815928A8200DDD4F7 /* ANFBChainedData.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC0E8E715928A8200DDD4F7 /* ANFBChainedData.m */; };
+		FAC0E8EB15928B2F00DDD4F7 /* ANFBSessionTicket.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC0E8EA15928B2F00DDD4F7 /* ANFBSessionTicket.m */; };
+		FAC0E8F81592932200DDD4F7 /* ANFBPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC0E8F71592932100DDD4F7 /* ANFBPerson.m */; };
+		FAC0E8FC159296FA00DDD4F7 /* NSDate+Facebook.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC0E8FB159296FA00DDD4F7 /* NSDate+Facebook.m */; };
+		FAC0E90015929A2B00DDD4F7 /* ANFBFriends.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC0E8FF15929A2B00DDD4F7 /* ANFBFriends.m */; };
+		FAC0E90A15929B8700DDD4F7 /* ANFBFriendsWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC0E90915929B8700DDD4F7 /* ANFBFriendsWindow.m */; };
+		FAC0E9131592A02300DDD4F7 /* ANFBChainedObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC0E9121592A02300DDD4F7 /* ANFBChainedObjects.m */; };
+		FAC0E91D1592A62000DDD4F7 /* ANFBAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC0E9161592A62000DDD4F7 /* ANFBAlbum.m */; };
+		FAC0E91E1592A62000DDD4F7 /* ANFBAlbums.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC0E9181592A62000DDD4F7 /* ANFBAlbums.m */; };
+		FAC0E91F1592A62000DDD4F7 /* ANFBPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC0E91A1592A62000DDD4F7 /* ANFBPhoto.m */; };
+		FAC0E9201592A62000DDD4F7 /* ANFBPhotos.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC0E91C1592A62000DDD4F7 /* ANFBPhotos.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +50,32 @@
 		FAC0E8DA15925D5700DDD4F7 /* ANFBAuthWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANFBAuthWindow.m; sourceTree = "<group>"; };
 		FAC0E8DB15925D5700DDD4F7 /* ANFBOAuthInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANFBOAuthInfo.h; sourceTree = "<group>"; };
 		FAC0E8DC15925D5700DDD4F7 /* ANFBOAuthInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANFBOAuthInfo.m; sourceTree = "<group>"; };
+		FAC0E8E015925DA700DDD4F7 /* ANFBSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANFBSession.h; sourceTree = "<group>"; };
+		FAC0E8E115925DA700DDD4F7 /* ANFBSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANFBSession.m; sourceTree = "<group>"; };
+		FAC0E8E315925E5300DDD4F7 /* ANFBResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANFBResponse.h; sourceTree = "<group>"; };
+		FAC0E8E415925E5300DDD4F7 /* ANFBResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANFBResponse.m; sourceTree = "<group>"; };
+		FAC0E8E615928A8200DDD4F7 /* ANFBChainedData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANFBChainedData.h; sourceTree = "<group>"; };
+		FAC0E8E715928A8200DDD4F7 /* ANFBChainedData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANFBChainedData.m; sourceTree = "<group>"; };
+		FAC0E8E915928B2E00DDD4F7 /* ANFBSessionTicket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANFBSessionTicket.h; sourceTree = "<group>"; };
+		FAC0E8EA15928B2F00DDD4F7 /* ANFBSessionTicket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANFBSessionTicket.m; sourceTree = "<group>"; };
+		FAC0E8F61592932100DDD4F7 /* ANFBPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANFBPerson.h; sourceTree = "<group>"; };
+		FAC0E8F71592932100DDD4F7 /* ANFBPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANFBPerson.m; sourceTree = "<group>"; };
+		FAC0E8FA159296FA00DDD4F7 /* NSDate+Facebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Facebook.h"; sourceTree = "<group>"; };
+		FAC0E8FB159296FA00DDD4F7 /* NSDate+Facebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Facebook.m"; sourceTree = "<group>"; };
+		FAC0E8FE15929A2B00DDD4F7 /* ANFBFriends.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANFBFriends.h; sourceTree = "<group>"; };
+		FAC0E8FF15929A2B00DDD4F7 /* ANFBFriends.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANFBFriends.m; sourceTree = "<group>"; };
+		FAC0E90815929B8700DDD4F7 /* ANFBFriendsWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANFBFriendsWindow.h; sourceTree = "<group>"; };
+		FAC0E90915929B8700DDD4F7 /* ANFBFriendsWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANFBFriendsWindow.m; sourceTree = "<group>"; };
+		FAC0E9111592A02300DDD4F7 /* ANFBChainedObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANFBChainedObjects.h; sourceTree = "<group>"; };
+		FAC0E9121592A02300DDD4F7 /* ANFBChainedObjects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANFBChainedObjects.m; sourceTree = "<group>"; };
+		FAC0E9151592A62000DDD4F7 /* ANFBAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANFBAlbum.h; sourceTree = "<group>"; };
+		FAC0E9161592A62000DDD4F7 /* ANFBAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANFBAlbum.m; sourceTree = "<group>"; };
+		FAC0E9171592A62000DDD4F7 /* ANFBAlbums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANFBAlbums.h; sourceTree = "<group>"; };
+		FAC0E9181592A62000DDD4F7 /* ANFBAlbums.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANFBAlbums.m; sourceTree = "<group>"; };
+		FAC0E9191592A62000DDD4F7 /* ANFBPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANFBPhoto.h; sourceTree = "<group>"; };
+		FAC0E91A1592A62000DDD4F7 /* ANFBPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANFBPhoto.m; sourceTree = "<group>"; };
+		FAC0E91B1592A62000DDD4F7 /* ANFBPhotos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANFBPhotos.h; sourceTree = "<group>"; };
+		FAC0E91C1592A62000DDD4F7 /* ANFBPhotos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANFBPhotos.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,9 +131,12 @@
 		FA6FE35215911380005783B1 /* FacebookCache */ = {
 			isa = PBXGroup;
 			children = (
+				FAC0E8DF15925D9800DDD4F7 /* Graph API */,
 				FAC0E8D815925D5700DDD4F7 /* Authentication */,
 				FA6FE35E15911380005783B1 /* ANAppDelegate.h */,
 				FA6FE35F15911380005783B1 /* ANAppDelegate.m */,
+				FAC0E90815929B8700DDD4F7 /* ANFBFriendsWindow.h */,
+				FAC0E90915929B8700DDD4F7 /* ANFBFriendsWindow.m */,
 				FA6FE36115911381005783B1 /* MainMenu.xib */,
 				FA6FE35315911380005783B1 /* Supporting Files */,
 			);
@@ -122,6 +164,61 @@
 				FAC0E8DC15925D5700DDD4F7 /* ANFBOAuthInfo.m */,
 			);
 			path = Authentication;
+			sourceTree = "<group>";
+		};
+		FAC0E8DF15925D9800DDD4F7 /* Graph API */ = {
+			isa = PBXGroup;
+			children = (
+				FAC0E9141592A61F00DDD4F7 /* Photos */,
+				FAC0E8FD15929A1F00DDD4F7 /* Friends */,
+				FAC0E8F9159296E500DDD4F7 /* Utilities */,
+				FAC0E8E015925DA700DDD4F7 /* ANFBSession.h */,
+				FAC0E8E115925DA700DDD4F7 /* ANFBSession.m */,
+				FAC0E8E315925E5300DDD4F7 /* ANFBResponse.h */,
+				FAC0E8E415925E5300DDD4F7 /* ANFBResponse.m */,
+				FAC0E8E915928B2E00DDD4F7 /* ANFBSessionTicket.h */,
+				FAC0E8EA15928B2F00DDD4F7 /* ANFBSessionTicket.m */,
+				FAC0E8E615928A8200DDD4F7 /* ANFBChainedData.h */,
+				FAC0E8E715928A8200DDD4F7 /* ANFBChainedData.m */,
+				FAC0E9111592A02300DDD4F7 /* ANFBChainedObjects.h */,
+				FAC0E9121592A02300DDD4F7 /* ANFBChainedObjects.m */,
+				FAC0E8F61592932100DDD4F7 /* ANFBPerson.h */,
+				FAC0E8F71592932100DDD4F7 /* ANFBPerson.m */,
+			);
+			path = "Graph API";
+			sourceTree = "<group>";
+		};
+		FAC0E8F9159296E500DDD4F7 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				FAC0E8FA159296FA00DDD4F7 /* NSDate+Facebook.h */,
+				FAC0E8FB159296FA00DDD4F7 /* NSDate+Facebook.m */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		FAC0E8FD15929A1F00DDD4F7 /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				FAC0E8FE15929A2B00DDD4F7 /* ANFBFriends.h */,
+				FAC0E8FF15929A2B00DDD4F7 /* ANFBFriends.m */,
+			);
+			path = Friends;
+			sourceTree = "<group>";
+		};
+		FAC0E9141592A61F00DDD4F7 /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				FAC0E9151592A62000DDD4F7 /* ANFBAlbum.h */,
+				FAC0E9161592A62000DDD4F7 /* ANFBAlbum.m */,
+				FAC0E9171592A62000DDD4F7 /* ANFBAlbums.h */,
+				FAC0E9181592A62000DDD4F7 /* ANFBAlbums.m */,
+				FAC0E9191592A62000DDD4F7 /* ANFBPhoto.h */,
+				FAC0E91A1592A62000DDD4F7 /* ANFBPhoto.m */,
+				FAC0E91B1592A62000DDD4F7 /* ANFBPhotos.h */,
+				FAC0E91C1592A62000DDD4F7 /* ANFBPhotos.m */,
+			);
+			path = Photos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +289,19 @@
 				FA6FE36015911380005783B1 /* ANAppDelegate.m in Sources */,
 				FAC0E8DD15925D5700DDD4F7 /* ANFBAuthWindow.m in Sources */,
 				FAC0E8DE15925D5700DDD4F7 /* ANFBOAuthInfo.m in Sources */,
+				FAC0E8E215925DA700DDD4F7 /* ANFBSession.m in Sources */,
+				FAC0E8E515925E5300DDD4F7 /* ANFBResponse.m in Sources */,
+				FAC0E8E815928A8200DDD4F7 /* ANFBChainedData.m in Sources */,
+				FAC0E8EB15928B2F00DDD4F7 /* ANFBSessionTicket.m in Sources */,
+				FAC0E8F81592932200DDD4F7 /* ANFBPerson.m in Sources */,
+				FAC0E8FC159296FA00DDD4F7 /* NSDate+Facebook.m in Sources */,
+				FAC0E90015929A2B00DDD4F7 /* ANFBFriends.m in Sources */,
+				FAC0E90A15929B8700DDD4F7 /* ANFBFriendsWindow.m in Sources */,
+				FAC0E9131592A02300DDD4F7 /* ANFBChainedObjects.m in Sources */,
+				FAC0E91D1592A62000DDD4F7 /* ANFBAlbum.m in Sources */,
+				FAC0E91E1592A62000DDD4F7 /* ANFBAlbums.m in Sources */,
+				FAC0E91F1592A62000DDD4F7 /* ANFBPhoto.m in Sources */,
+				FAC0E9201592A62000DDD4F7 /* ANFBPhotos.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
