@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "ANFBAlbums.h"
 #import "ANFBPhotos.h"
-#import "ANPhotosDLWindow.h"
 #import "ANDownloadsWindow.h"
 
 @interface ANFBFriendWindow : NSWindow <ANFBChainedDataDelegate, NSTableViewDelegate, NSTableViewDataSource> {

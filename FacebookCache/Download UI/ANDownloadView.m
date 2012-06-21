@@ -16,9 +16,10 @@ static CGSize sizeForString(NSString * myString, NSFont * myFont);
 @synthesize backgroundColor;
 @synthesize delegate;
 
-- (id)initWithSession:(ANFBSession *)session directory:(NSString *)directory photos:(NSArray *)photos albums:(NSArray *)albums {
+- (id)initWithSession:(ANFBSession *)theSession personID:(NSString *)uid directory:(NSString *)directory photos:(NSArray *)photos albums:(NSArray *)albums {
     NSRect viewFrame = NSMakeRect(0, 0, kANDownloadViewWidth, kANDownloadViewHeight);
     if ((self = [super initWithFrame:viewFrame])) {
+        session = theSession;
         downloader = [[ANPhotoDownloader alloc] initWithSession:session directory:directory albums:albums photos:photos];
         [downloader setDelegate:self];
         NSString * progressTitle = [NSString stringWithFormat:@"Downloading to \"%@\"", [directory lastPathComponent]];
@@ -53,6 +54,23 @@ static CGSize sizeForString(NSString * myString, NSFont * myFont);
         [titleLabel setStringValue:[self shrinkText:progressTitle withLabel:titleLabel]];
         [titleLabel setFont:[NSFont systemFontOfSize:11]];
         [self addSubview:titleLabel];
+        
+        iconImageView = [[NSImageView alloc] initWithFrame:NSMakeRect(10, 22, 32, 32)];
+        [iconImageView setImage:[NSImage imageNamed:@"blank.jpg"]];
+        [self addSubview:iconImageView];
+        
+        NSString * picURLStr = [NSString stringWithFormat:kANFacebookProfilePicturePath, uid];
+        NSURL * picURL = [NSURL URLWithString:picURLStr];
+        NSURLRequest * picReq = [NSURLRequest requestWithURL:picURL];
+        iconTicket = [session sendRequestAsynchronously:picReq callback:^(ANFBResponse * response, NSError * error) {
+            if ([response responseData]) {
+                NSImage * image = [[NSImage alloc] initWithData:[response responseData]];
+                if (image) {
+                    [iconImageView setImage:image];
+                }
+            }
+            iconTicket = nil;
+        }];
     }
     return self;
 }
@@ -64,10 +82,12 @@ static CGSize sizeForString(NSString * myString, NSFont * myFont);
 #pragma mark - Actions -
 
 - (void)okayButtonPressed:(id)sender {
+    if (iconTicket) [session cancelTicket:iconTicket];
     [delegate downloadViewFinished:self];
 }
 
 - (void)closeButtonPressed:(id)sender {
+    if (iconTicket) [session cancelTicket:iconTicket];
     if ([downloader isLoading]) [downloader cancelDownload];
     [delegate downloadViewFinished:self];
 }
@@ -75,12 +95,13 @@ static CGSize sizeForString(NSString * myString, NSFont * myFont);
 #pragma mark - Photo Downloader -
 
 - (void)photoDownloaderComplete:(ANPhotoDownloader *)downloader {
+    if (iconTicket) [session cancelTicket:iconTicket];
     [delegate downloadViewFinished:self];
 }
 
 - (void)photoDownloader:(ANPhotoDownloader *)downloader progress:(float)progress forStage:(NSString *)status {
     [progressIndicator setDoubleValue:(double)progress];
-    [subtitleLabel setStringValue:[status stringByAppendingFormat:@"%d - %%", (int)round(progress * 100)]];
+    [subtitleLabel setStringValue:[status stringByAppendingFormat:@" - %d%%", (int)round(progress * 100)]];
 }
 
 - (void)photoDownloader:(ANPhotoDownloader *)downloader failedWithError:(NSError *)error {
@@ -130,6 +151,12 @@ static CGSize sizeForString(NSString * myString, NSFont * myFont);
         [[NSColor colorWithDeviceWhite:0.66667 alpha:1] set];
         NSRectFill(NSMakeRect(0, 0, self.frame.size.width, 1));
     }
+}
+
+#pragma mark - Memory -
+
+- (void)dealloc {
+    if (iconTicket) [session cancelTicket:iconTicket];
 }
 
 @end

@@ -167,6 +167,7 @@
 - (void)downloadDialog:(NSString *)path photos:(NSArray *)thePhotos albums:(NSArray *)theAlbums {
     ANDownloadsWindow * window = [ANDownloadsWindow sharedDownloadsWindow];
     ANDownloadView * view = [[ANDownloadView alloc] initWithSession:session
+                                                           personID:[friend userID]
                                                           directory:path
                                                              photos:thePhotos
                                                              albums:theAlbums];
@@ -204,7 +205,6 @@
 - (void)downloadPhotos:(id)sender {
     NSSavePanel * savePanel = [NSSavePanel savePanel];
     [savePanel setTitle:@"Download Friend"];
-    [savePanel setPrompt:@"Choose a directory for your friend"];
     [savePanel beginSheetModalForWindow:self completionHandler:^(NSInteger result) {
         if (result != NSFileHandlingPanelOKButton) return;
         [self downloadDialog:[[savePanel URL] path]
@@ -216,7 +216,6 @@
 - (void)downloadAlbums:(id)sender {
     NSSavePanel * savePanel = [NSSavePanel savePanel];
     [savePanel setTitle:@"Download Friend"];
-    [savePanel setPrompt:@"Choose a directory for your friend"];
     [savePanel beginSheetModalForWindow:self completionHandler:^(NSInteger result) {
         if (result != NSFileHandlingPanelOKButton) return;
         [self downloadDialog:[[savePanel URL] path]
@@ -228,7 +227,6 @@
 - (void)downloadBoth:(id)sender {
     NSSavePanel * savePanel = [NSSavePanel savePanel];
     [savePanel setTitle:@"Download Friend"];
-    [savePanel setPrompt:@"Choose a directory for your friend"];
     [savePanel beginSheetModalForWindow:self completionHandler:^(NSInteger result) {
         if (result != NSFileHandlingPanelOKButton) return;
         [self downloadDialog:[[savePanel URL] path]
