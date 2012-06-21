@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA05C1C515935DA8000D9929 /* ANFBAlbumPhotos.m in Sources */ = {isa = PBXBuildFile; fileRef = FA05C1C415935DA8000D9929 /* ANFBAlbumPhotos.m */; };
+		FA05C1C815936139000D9929 /* ANPhotoDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = FA05C1C715936139000D9929 /* ANPhotoDownloader.m */; };
+		FA05C1CB15936D15000D9929 /* ANPhotosDLWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = FA05C1CA15936D15000D9929 /* ANPhotosDLWindow.m */; };
+		FA05C1CF15939DAD000D9929 /* ANDownloadsWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = FA05C1CE15939DAD000D9929 /* ANDownloadsWindow.m */; };
+		FA05C1D215939DB8000D9929 /* ANDownloadView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA05C1D115939DB8000D9929 /* ANDownloadView.m */; };
+		FA05C1D515939ECA000D9929 /* ANCancelButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FA05C1D415939ECA000D9929 /* ANCancelButton.m */; };
+		FA05C1DA15939F19000D9929 /* close1.png in Resources */ = {isa = PBXBuildFile; fileRef = FA05C1D615939F19000D9929 /* close1.png */; };
+		FA05C1DB15939F19000D9929 /* close2.png in Resources */ = {isa = PBXBuildFile; fileRef = FA05C1D715939F19000D9929 /* close2.png */; };
+		FA05C1DC15939F19000D9929 /* close3.png in Resources */ = {isa = PBXBuildFile; fileRef = FA05C1D815939F19000D9929 /* close3.png */; };
+		FA05C1DD15939F19000D9929 /* close4.png in Resources */ = {isa = PBXBuildFile; fileRef = FA05C1D915939F19000D9929 /* close4.png */; };
 		FA6FE34D15911380005783B1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6FE34C15911380005783B1 /* Cocoa.framework */; };
 		FA6FE35715911380005783B1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA6FE35515911380005783B1 /* InfoPlist.strings */; };
 		FA6FE35915911380005783B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6FE35815911380005783B1 /* main.m */; };
@@ -34,6 +44,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA05C1C315935DA8000D9929 /* ANFBAlbumPhotos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANFBAlbumPhotos.h; sourceTree = "<group>"; };
+		FA05C1C415935DA8000D9929 /* ANFBAlbumPhotos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANFBAlbumPhotos.m; sourceTree = "<group>"; };
+		FA05C1C615936139000D9929 /* ANPhotoDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANPhotoDownloader.h; sourceTree = "<group>"; };
+		FA05C1C715936139000D9929 /* ANPhotoDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANPhotoDownloader.m; sourceTree = "<group>"; };
+		FA05C1C915936D15000D9929 /* ANPhotosDLWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANPhotosDLWindow.h; sourceTree = "<group>"; };
+		FA05C1CA15936D15000D9929 /* ANPhotosDLWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANPhotosDLWindow.m; sourceTree = "<group>"; };
+		FA05C1CD15939DAD000D9929 /* ANDownloadsWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANDownloadsWindow.h; sourceTree = "<group>"; };
+		FA05C1CE15939DAD000D9929 /* ANDownloadsWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANDownloadsWindow.m; sourceTree = "<group>"; };
+		FA05C1D015939DB8000D9929 /* ANDownloadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANDownloadView.h; sourceTree = "<group>"; };
+		FA05C1D115939DB8000D9929 /* ANDownloadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANDownloadView.m; sourceTree = "<group>"; };
+		FA05C1D315939ECA000D9929 /* ANCancelButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANCancelButton.h; sourceTree = "<group>"; };
+		FA05C1D415939ECA000D9929 /* ANCancelButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANCancelButton.m; sourceTree = "<group>"; };
+		FA05C1D615939F19000D9929 /* close1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close1.png; sourceTree = "<group>"; };
+		FA05C1D715939F19000D9929 /* close2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close2.png; sourceTree = "<group>"; };
+		FA05C1D815939F19000D9929 /* close3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close3.png; sourceTree = "<group>"; };
+		FA05C1D915939F19000D9929 /* close4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close4.png; sourceTree = "<group>"; };
 		FA6FE34815911380005783B1 /* FacebookCache.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FacebookCache.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA6FE34C15911380005783B1 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		FA6FE34F15911380005783B1 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -97,6 +123,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA05C1CC15939D8D000D9929 /* Download UI */ = {
+			isa = PBXGroup;
+			children = (
+				FA05C1CD15939DAD000D9929 /* ANDownloadsWindow.h */,
+				FA05C1CE15939DAD000D9929 /* ANDownloadsWindow.m */,
+				FA05C1D015939DB8000D9929 /* ANDownloadView.h */,
+				FA05C1D115939DB8000D9929 /* ANDownloadView.m */,
+				FA05C1D315939ECA000D9929 /* ANCancelButton.h */,
+				FA05C1D415939ECA000D9929 /* ANCancelButton.m */,
+			);
+			path = "Download UI";
+			sourceTree = "<group>";
+		};
 		FA6FE33D15911380005783B1 = {
 			isa = PBXGroup;
 			children = (
@@ -137,14 +176,19 @@
 		FA6FE35215911380005783B1 /* FacebookCache */ = {
 			isa = PBXGroup;
 			children = (
-				FAC0E8DF15925D9800DDD4F7 /* Graph API */,
 				FAC0E8D815925D5700DDD4F7 /* Authentication */,
+				FAC0E8DF15925D9800DDD4F7 /* Graph API */,
+				FA05C1CC15939D8D000D9929 /* Download UI */,
 				FA6FE35E15911380005783B1 /* ANAppDelegate.h */,
 				FA6FE35F15911380005783B1 /* ANAppDelegate.m */,
 				FAC0E90815929B8700DDD4F7 /* ANFBFriendsWindow.h */,
 				FAC0E90915929B8700DDD4F7 /* ANFBFriendsWindow.m */,
 				FAC0E9211592A85900DDD4F7 /* ANFBFriendWindow.h */,
 				FAC0E9221592A85900DDD4F7 /* ANFBFriendWindow.m */,
+				FA05C1C615936139000D9929 /* ANPhotoDownloader.h */,
+				FA05C1C715936139000D9929 /* ANPhotoDownloader.m */,
+				FA05C1C915936D15000D9929 /* ANPhotosDLWindow.h */,
+				FA05C1CA15936D15000D9929 /* ANPhotosDLWindow.m */,
 				FA6FE36115911381005783B1 /* MainMenu.xib */,
 				FA6FE35315911380005783B1 /* Supporting Files */,
 			);
@@ -154,6 +198,10 @@
 		FA6FE35315911380005783B1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FA05C1D615939F19000D9929 /* close1.png */,
+				FA05C1D715939F19000D9929 /* close2.png */,
+				FA05C1D815939F19000D9929 /* close3.png */,
+				FA05C1D915939F19000D9929 /* close4.png */,
 				FA6FE35415911380005783B1 /* FacebookCache-Info.plist */,
 				FA6FE35515911380005783B1 /* InfoPlist.strings */,
 				FA6FE35815911380005783B1 /* main.m */,
@@ -227,6 +275,8 @@
 				FAC0E91A1592A62000DDD4F7 /* ANFBPhoto.m */,
 				FAC0E91B1592A62000DDD4F7 /* ANFBPhotos.h */,
 				FAC0E91C1592A62000DDD4F7 /* ANFBPhotos.m */,
+				FA05C1C315935DA8000D9929 /* ANFBAlbumPhotos.h */,
+				FA05C1C415935DA8000D9929 /* ANFBAlbumPhotos.m */,
 			);
 			path = Photos;
 			sourceTree = "<group>";
@@ -285,6 +335,10 @@
 				FA6FE35715911380005783B1 /* InfoPlist.strings in Resources */,
 				FA6FE35D15911380005783B1 /* Credits.rtf in Resources */,
 				FA6FE36315911381005783B1 /* MainMenu.xib in Resources */,
+				FA05C1DA15939F19000D9929 /* close1.png in Resources */,
+				FA05C1DB15939F19000D9929 /* close2.png in Resources */,
+				FA05C1DC15939F19000D9929 /* close3.png in Resources */,
+				FA05C1DD15939F19000D9929 /* close4.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +368,12 @@
 				FAC0E9201592A62000DDD4F7 /* ANFBPhotos.m in Sources */,
 				FAC0E9231592A85900DDD4F7 /* ANFBFriendWindow.m in Sources */,
 				FAC0E9261592B1FC00DDD4F7 /* NSDictionary+HTTPParams.m in Sources */,
+				FA05C1C515935DA8000D9929 /* ANFBAlbumPhotos.m in Sources */,
+				FA05C1C815936139000D9929 /* ANPhotoDownloader.m in Sources */,
+				FA05C1CB15936D15000D9929 /* ANPhotosDLWindow.m in Sources */,
+				FA05C1CF15939DAD000D9929 /* ANDownloadsWindow.m in Sources */,
+				FA05C1D215939DB8000D9929 /* ANDownloadView.m in Sources */,
+				FA05C1D515939ECA000D9929 /* ANCancelButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

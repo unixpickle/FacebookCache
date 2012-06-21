@@ -9,7 +9,7 @@
 #import "ANFBChainedObjects.h"
 #import "ANFBPhoto.h"
 
-#define kANFBPhotosGraphURL @"https://graph.facebook.com/%@/photos"
+#define kANFBPhotosGraphURL @"https://graph.facebook.com/%@/photos?limit=50"
 
 @interface ANFBPhotos : ANFBChainedObjects
 

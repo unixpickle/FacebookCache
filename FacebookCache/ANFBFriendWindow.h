@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "ANFBAlbums.h"
 #import "ANFBPhotos.h"
+#import "ANPhotosDLWindow.h"
+#import "ANDownloadsWindow.h"
 
 @interface ANFBFriendWindow : NSWindow <ANFBChainedDataDelegate, NSTableViewDelegate, NSTableViewDataSource> {
     ANFBSession * session;
@@ -32,5 +34,12 @@
 - (NSRect)albumsTableFrame;
 - (void)createPhotosTable;
 - (void)createAlbumsTable;
+
+- (void)downloadDialog:(NSString *)path photos:(NSArray *)photos albums:(NSArray *)albums;
+- (NSArray *)selectedAlbums;
+
+- (void)downloadPhotos:(id)sender;
+- (void)downloadAlbums:(id)sender;
+- (void)downloadBoth:(id)sender;
 
 @end

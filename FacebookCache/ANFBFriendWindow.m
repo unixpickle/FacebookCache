@@ -29,7 +29,7 @@
 
 - (id)initWithSession:(ANFBSession *)theSession friend:(ANFBPerson *)aPerson {
     NSRect screenFrame = [[NSScreen mainScreen] frame];
-    NSRect windowFrame = NSMakeRect(0, 0, 400, 400);
+    NSRect windowFrame = NSMakeRect(0, 0, 410, 400);
     windowFrame.origin.x = (screenFrame.size.width - windowFrame.size.width) / 2;
     windowFrame.origin.y = (screenFrame.size.height - windowFrame.size.height) / 2;
     windowFrame.origin.x += arc4random() * (screenFrame.size.width - windowFrame.size.width) / 2 - 100;
@@ -64,6 +64,35 @@
         
         [self.contentView addSubview:photosProgress];
         [self.contentView addSubview:albumsProgress];
+        
+        // download buttons
+        downloadPhotosButton = [[NSButton alloc] initWithFrame:NSMakeRect(windowFrame.size.width - 140,
+                                                                          10, 130, 32)];
+        downloadAlbumsButton = [[NSButton alloc] initWithFrame:NSMakeRect(windowFrame.size.width - 270,
+                                                                          10, 130, 32)];
+        downloadBothButton = [[NSButton alloc] initWithFrame:NSMakeRect(windowFrame.size.width - 400,
+                                                                        10, 130, 32)];
+        
+        [downloadPhotosButton setBezelStyle:NSRoundedBezelStyle];
+        [downloadPhotosButton setTitle:@"DL Photos"];
+        [downloadPhotosButton setTarget:self];
+        [downloadPhotosButton setAction:@selector(downloadPhotos:)];
+        [downloadPhotosButton setFont:[NSFont systemFontOfSize:13]];
+        [self.contentView addSubview:downloadPhotosButton];
+        
+        [downloadAlbumsButton setBezelStyle:NSRoundedBezelStyle];
+        [downloadAlbumsButton setTitle:@"DL Albums"];
+        [downloadAlbumsButton setTarget:self];
+        [downloadAlbumsButton setAction:@selector(downloadAlbums:)];
+        [downloadAlbumsButton setFont:[NSFont systemFontOfSize:13]];
+        [self.contentView addSubview:downloadAlbumsButton];
+        
+        [downloadBothButton setBezelStyle:NSRoundedBezelStyle];
+        [downloadBothButton setTitle:@"DL Both"];
+        [downloadBothButton setTarget:self];
+        [downloadBothButton setAction:@selector(downloadBoth:)];
+        [downloadBothButton setFont:[NSFont systemFontOfSize:13]];
+        [self.contentView addSubview:downloadBothButton];
         
         // load photos and albums
         photos = [[ANFBPhotos alloc] initWithSession:session facebookID:[friend userID]];
@@ -135,6 +164,25 @@
     [[self contentView] addSubview:tableScrollView];
 }
 
+- (void)downloadDialog:(NSString *)path photos:(NSArray *)thePhotos albums:(NSArray *)theAlbums {
+    ANDownloadsWindow * window = [ANDownloadsWindow sharedDownloadsWindow];
+    ANDownloadView * view = [[ANDownloadView alloc] initWithSession:session
+                                                          directory:path
+                                                             photos:thePhotos
+                                                             albums:theAlbums];
+    [window pushDownloadView:view];
+}
+
+- (NSArray *)selectedAlbums {
+    NSMutableArray * useAlbums = [NSMutableArray array];
+    for (ANFBAlbum * album in [albums albums]) {
+        if (![disabledAlbums containsObject:album]) {
+            [useAlbums addObject:album];
+        }
+    }
+    return useAlbums;
+}
+
 #pragma mark - Events -
 
 - (void)makeKeyAndOrderFront:(id)sender {
@@ -151,6 +199,42 @@
         [albums cancelFetching];
     }
     [super orderOut:sender];
+}
+
+- (void)downloadPhotos:(id)sender {
+    NSSavePanel * savePanel = [NSSavePanel savePanel];
+    [savePanel setTitle:@"Download Friend"];
+    [savePanel setPrompt:@"Choose a directory for your friend"];
+    [savePanel beginSheetModalForWindow:self completionHandler:^(NSInteger result) {
+        if (result != NSFileHandlingPanelOKButton) return;
+        [self downloadDialog:[[savePanel URL] path]
+                      photos:[photos photos]
+                      albums:nil];
+    }];
+}
+
+- (void)downloadAlbums:(id)sender {
+    NSSavePanel * savePanel = [NSSavePanel savePanel];
+    [savePanel setTitle:@"Download Friend"];
+    [savePanel setPrompt:@"Choose a directory for your friend"];
+    [savePanel beginSheetModalForWindow:self completionHandler:^(NSInteger result) {
+        if (result != NSFileHandlingPanelOKButton) return;
+        [self downloadDialog:[[savePanel URL] path]
+                      photos:nil
+                      albums:[self selectedAlbums]];
+    }];
+}
+
+- (void)downloadBoth:(id)sender {
+    NSSavePanel * savePanel = [NSSavePanel savePanel];
+    [savePanel setTitle:@"Download Friend"];
+    [savePanel setPrompt:@"Choose a directory for your friend"];
+    [savePanel beginSheetModalForWindow:self completionHandler:^(NSInteger result) {
+        if (result != NSFileHandlingPanelOKButton) return;
+        [self downloadDialog:[[savePanel URL] path]
+                      photos:[photos photos]
+                      albums:[self selectedAlbums]];
+    }];
 }
 
 #pragma mark - Photos & Albums Callback -
@@ -222,10 +306,8 @@
 
 - (void)dealloc {
     // they can't have weak references because we're an NSWindow
-    NSLog(@"Dealloc");
     [photos setDelegate:nil];
     [albums setDelegate:nil];
-    NSLog(@"End dealloc");
 }
 
 @end

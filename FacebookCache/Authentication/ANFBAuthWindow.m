@@ -61,12 +61,7 @@
     [self processOAuthResponse:URL];
 }
 
-- (void)webView:(WebView *)sender didReceiveServerRedirectForProvisionalLoadForFrame:(WebFrame *)frame {
-    NSLog(@"%@", [(NSHTTPURLResponse *)[[frame dataSource] response] allHeaderFields]);
-}
-
 - (NSURLRequest *)webView:(WebView *)sender resource:(id)identifier willSendRequest:(NSURLRequest *)request redirectResponse:(NSURLResponse *)redirectResponse fromDataSource:(WebDataSource *)dataSource {
-    NSLog(@"URL: %@", request.URL);
     [self processOAuthResponse:[request URL]];
     return request;
 }

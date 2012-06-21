@@ -59,7 +59,7 @@
     NSDictionary * dictionary = [self responseDictionary];
     NSDictionary * error = [dictionary objectForKey:@"error"];
     if (!error) return nil;
-    NSMutableDictionary * userInfo = [NSDictionary dictionary];
+    NSMutableDictionary * userInfo = [NSMutableDictionary dictionary];
     NSInteger errorNumber = 0;
     NSString * errorDomain = @"GraphAPI";
     if ([error objectForKey:@"message"]) {
