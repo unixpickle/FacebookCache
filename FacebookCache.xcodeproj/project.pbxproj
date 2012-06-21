@@ -29,6 +29,8 @@
 		FAC0E91E1592A62000DDD4F7 /* ANFBAlbums.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC0E9181592A62000DDD4F7 /* ANFBAlbums.m */; };
 		FAC0E91F1592A62000DDD4F7 /* ANFBPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC0E91A1592A62000DDD4F7 /* ANFBPhoto.m */; };
 		FAC0E9201592A62000DDD4F7 /* ANFBPhotos.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC0E91C1592A62000DDD4F7 /* ANFBPhotos.m */; };
+		FAC0E9231592A85900DDD4F7 /* ANFBFriendWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC0E9221592A85900DDD4F7 /* ANFBFriendWindow.m */; };
+		FAC0E9261592B1FC00DDD4F7 /* NSDictionary+HTTPParams.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC0E9251592B1FC00DDD4F7 /* NSDictionary+HTTPParams.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +78,10 @@
 		FAC0E91A1592A62000DDD4F7 /* ANFBPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANFBPhoto.m; sourceTree = "<group>"; };
 		FAC0E91B1592A62000DDD4F7 /* ANFBPhotos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANFBPhotos.h; sourceTree = "<group>"; };
 		FAC0E91C1592A62000DDD4F7 /* ANFBPhotos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANFBPhotos.m; sourceTree = "<group>"; };
+		FAC0E9211592A85900DDD4F7 /* ANFBFriendWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANFBFriendWindow.h; sourceTree = "<group>"; };
+		FAC0E9221592A85900DDD4F7 /* ANFBFriendWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANFBFriendWindow.m; sourceTree = "<group>"; };
+		FAC0E9241592B1FC00DDD4F7 /* NSDictionary+HTTPParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+HTTPParams.h"; sourceTree = "<group>"; };
+		FAC0E9251592B1FC00DDD4F7 /* NSDictionary+HTTPParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+HTTPParams.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +143,8 @@
 				FA6FE35F15911380005783B1 /* ANAppDelegate.m */,
 				FAC0E90815929B8700DDD4F7 /* ANFBFriendsWindow.h */,
 				FAC0E90915929B8700DDD4F7 /* ANFBFriendsWindow.m */,
+				FAC0E9211592A85900DDD4F7 /* ANFBFriendWindow.h */,
+				FAC0E9221592A85900DDD4F7 /* ANFBFriendWindow.m */,
 				FA6FE36115911381005783B1 /* MainMenu.xib */,
 				FA6FE35315911380005783B1 /* Supporting Files */,
 			);
@@ -193,6 +201,8 @@
 			children = (
 				FAC0E8FA159296FA00DDD4F7 /* NSDate+Facebook.h */,
 				FAC0E8FB159296FA00DDD4F7 /* NSDate+Facebook.m */,
+				FAC0E9241592B1FC00DDD4F7 /* NSDictionary+HTTPParams.h */,
+				FAC0E9251592B1FC00DDD4F7 /* NSDictionary+HTTPParams.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -302,6 +312,8 @@
 				FAC0E91E1592A62000DDD4F7 /* ANFBAlbums.m in Sources */,
 				FAC0E91F1592A62000DDD4F7 /* ANFBPhoto.m in Sources */,
 				FAC0E9201592A62000DDD4F7 /* ANFBPhotos.m in Sources */,
+				FAC0E9231592A85900DDD4F7 /* ANFBFriendWindow.m in Sources */,
+				FAC0E9261592B1FC00DDD4F7 /* NSDictionary+HTTPParams.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

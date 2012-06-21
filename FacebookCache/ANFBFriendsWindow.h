@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "ANFBFriends.h"
+#import "ANFBFriendWindow.h"
 
 @interface ANFBFriendsWindow : NSWindow <ANFBChainedDataDelegate, NSTableViewDelegate, NSTableViewDataSource> {
     ANFBSession * session;
@@ -18,5 +19,7 @@
 
 - (id)initWithSession:(ANFBSession *)aSession;
 - (void)createFriendsTable;
+
+- (void)tableDoubleClicked:(id)sender;
 
 @end

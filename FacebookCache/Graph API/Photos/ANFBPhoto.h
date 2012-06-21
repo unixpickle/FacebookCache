@@ -11,7 +11,7 @@
 #import "ANFBPerson.h"
 
 @interface ANFBPhoto : NSObject {
-    NSString * pictureID;
+    NSString * photoID;
     ANFBPerson * from;
     NSURL * pictureURL;
     NSURL * sourceURL;
@@ -22,7 +22,7 @@
     NSArray * likes;
 }
 
-@property (readonly) NSString * pictureID;
+@property (readonly) NSString * photoID;
 @property (readonly) ANFBPerson * from;
 @property (readonly) NSURL * pictureURL;
 @property (readonly) NSURL * sourceURL;

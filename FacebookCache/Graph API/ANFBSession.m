@@ -76,14 +76,16 @@
     
     // append access token to URL
     NSString * urlString = [requestURL absoluteString];
-    NSURL * newURL = nil;
-    NSString * accessToken = [NSString stringWithFormat:@"access_token=%@", [oauthInfo accessToken]];
-    if (![requestURL parameterString]) {
-        urlString = [urlString stringByAppendingFormat:@"?%@", accessToken];
-    } else {
-        urlString = [urlString stringByAppendingFormat:@"&%@", accessToken];
+    NSDictionary * params = [NSDictionary dictionaryFromURLParameters:requestURL];
+    if (![params objectForKey:@"access_token"]) {
+        NSString * accessToken = [NSString stringWithFormat:@"access_token=%@", [oauthInfo accessToken]];
+        if ([params count] == 0) {
+            urlString = [urlString stringByAppendingFormat:@"?%@", accessToken];
+        } else {
+            urlString = [urlString stringByAppendingFormat:@"&%@", accessToken];
+        }
     }
-    newURL = [NSURL URLWithString:urlString];
+    NSURL * newURL = [NSURL URLWithString:urlString];
     [mutRequest setURL:newURL];
     
     return mutRequest;

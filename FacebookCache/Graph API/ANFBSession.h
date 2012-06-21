@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NSDictionary+HTTPParams.h"
 #import "ANFBOAuthInfo.h"
 #import "ANFBResponse.h"
 #import "ANFBSessionTicket.h"

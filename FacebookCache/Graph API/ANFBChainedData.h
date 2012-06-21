@@ -36,6 +36,7 @@
 - (id)initWithSession:(ANFBSession *)theSession graphURL:(NSURL *)firstPage;
 - (void)beginFetching;
 - (void)cancelFetching;
+- (BOOL)isLoading;
 
 - (void)addCollectedData:(NSArray *)someItems;
 - (NSArray *)collectedData;

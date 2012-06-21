@@ -36,6 +36,7 @@
                                    backing:bufferingType
                                      defer:flag
                                     screen:screen])) {
+        [self setReleasedWhenClosed:NO];
         self.title = @"Facebook Authentication";
         webView = [[WebView alloc] initWithFrame:[self.contentView bounds] frameName:@"frame" groupName:@"group"];
         [webView setAutoresizingMask:(NSViewWidthSizable | NSViewHeightSizable)];

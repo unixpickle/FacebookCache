@@ -47,6 +47,10 @@
     }
 }
 
+- (BOOL)isLoading {
+    return (currentPageTicket != nil);
+}
+
 #pragma mark - Collected Data -
 
 - (void)addCollectedData:(NSArray *)someItems {
@@ -67,6 +71,7 @@
                                               cachePolicy:NSURLRequestReloadIgnoringCacheData
                                           timeoutInterval:60];
     currentPageTicket = [session sendRequestAsynchronously:request callback:^(ANFBResponse * response, NSError * error) {
+        currentPageTicket = nil;
         if (error || !response) {
             [self handleFetchError:error];
         } else if ([response isErrorMessage]) {
@@ -78,8 +83,8 @@
             }
             
             NSURL * nextPageURL = [response nextPage];
-            if (nextPageURL) {
-                currentPageURL = [response nextPage];
+            if (nextPageURL && ![nextPageURL isEqual:currentPageURL]) {
+                currentPageURL = nextPageURL;
                 [self fetchNextPage];
             } else {
                 [self handleFetchComplete];

@@ -10,7 +10,7 @@
 
 @implementation ANFBPhoto
 
-@synthesize pictureID;
+@synthesize photoID;
 @synthesize from;
 @synthesize pictureURL;
 @synthesize sourceURL;
@@ -22,7 +22,7 @@
 
 - (id)initWithDictionary:(NSDictionary *)pictureInfo {
     if ((self = [super init])) {
-        pictureID = [pictureInfo objectForKey:@"id"];
+        photoID = [pictureInfo objectForKey:@"id"];
         from = [[ANFBPerson alloc] initWithUserObject:[pictureInfo objectForKey:@"from"]];
         pictureURL = [NSURL URLWithString:[pictureInfo objectForKey:@"picture"]];
         sourceURL = [NSURL URLWithString:[pictureInfo objectForKey:@"source"]];

@@ -16,14 +16,17 @@
     windowFrame.origin.x = (screenFrame.size.width - windowFrame.size.width) / 2;
     windowFrame.origin.y = (screenFrame.size.height - windowFrame.size.height) / 2;
     if ((self = [super initWithContentRect:windowFrame
-                                 styleMask:(NSTitledWindowMask | NSClosableWindowMask)
+                                 styleMask:(NSTitledWindowMask | NSMiniaturizableWindowMask | NSClosableWindowMask)
                                    backing:NSBackingStoreBuffered
                                      defer:NO])) {
+        [self setReleasedWhenClosed:NO];
         session = aSession;
+        self.title = @"Friends";
         // create initial progress indicator
         progressIndicator = [[NSProgressIndicator alloc] initWithFrame:NSMakeRect((windowFrame.size.width - 8) / 2,
                                                                                   (windowFrame.size.height - 8) / 2,
                                                                                   16, 16)];
+        [progressIndicator setControlSize:NSSmallControlSize];
         [progressIndicator setStyle:NSProgressIndicatorSpinningStyle];
         [progressIndicator startAnimation:self];
         [self.contentView addSubview:progressIndicator];
@@ -44,6 +47,7 @@
     friendsTable = [[NSTableView alloc] initWithFrame:tableScrollView.bounds];
     [friendsTable setDelegate:self];
     [friendsTable setDataSource:self];
+    [friendsTable setDoubleAction:@selector(tableDoubleClicked:)];
     
     NSTableColumn * friendColumn = [[NSTableColumn alloc] initWithIdentifier:@"Friend"];
     [[friendColumn headerCell] setStringValue:@"Name"];
@@ -58,6 +62,15 @@
     [tableScrollView setAutohidesScrollers:NO];
     [tableScrollView setAutoresizingMask:(NSViewWidthSizable | NSViewHeightSizable)];
     [[self contentView] addSubview:tableScrollView];
+}
+
+- (void)tableDoubleClicked:(id)sender {
+    NSIndexSet * set = [friendsTable selectedRowIndexes];
+    [set enumerateIndexesUsingBlock:^(NSUInteger idx, BOOL * stop) {
+        ANFBPerson * person = [[friends friends] objectAtIndex:idx];
+        ANFBFriendWindow * friendWindow = [[ANFBFriendWindow alloc] initWithSession:session friend:person];
+        [friendWindow makeKeyAndOrderFront:self];
+    }];
 }
 
 #pragma mark - Friends Delegate -
