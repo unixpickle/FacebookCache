@@ -11,7 +11,8 @@
 @implementation NSDate (Facebook)
 
 + (NSDate *)dateByParsingFacebookDate:(NSString *)dateString {
-    NSDateFormatter * formatter = [[NSDateFormatter alloc] initWithDateFormat:@"yyyy-MM-dd'T'HH:mm:ss+ZZZZ" allowNaturalLanguage:NO];
+    NSDateFormatter * formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssZZZ"];
     return [formatter dateFromString:dateString];
 }
 

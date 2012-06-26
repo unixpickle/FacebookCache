@@ -67,6 +67,7 @@
         downloadStage = ANPhotoDownloaderStageScanningAlbums;
     } else {
         downloadStage = ANPhotoDownloaderStageDownloadingPictures;
+        [self beginFetchingProcess];
     }
     [self handleProgress:0];
 }
